@@ -37,14 +37,15 @@ export default function About() {
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-12">
           <Reveal delay={80}>
             <div className="card p-6 sm:p-8">
-              <p className="text-pretty text-[0.95rem] leading-relaxed text-neutral-300 sm:text-base">
-                I am a final-year Electronics and Communication Engineering student at Global
-                Academy of Technology, Bengaluru, on the VTU B.E. Honours programme. My focus
-                sits in embedded systems, firmware, RTL and digital design, IoT security,
-                robotics, autonomous systems and Edge AI.
-              </p>
-              <p className="mt-4 text-pretty text-[0.95rem] leading-relaxed text-neutral-200">
-                {identity.summary}
+              <p className="text-pretty text-[0.95rem] leading-relaxed text-neutral-200 sm:text-base">
+                I am an Electronics &amp; Communication Engineering student with a knack for
+                mastering complex concepts rather than relying on memorization. Driven by
+                curiosity, I explore concepts ranging from RTL design and digital systems to
+                embedded platforms and real-time communication, always aiming to understand the
+                “why” behind each implementation. I adapt quickly to new tools and environments,
+                collaborate effectively across disciplines, and leverage strong analytical,
+                problem-solving, and communication skills to develop reliable, efficient
+                solutions.
               </p>
 
               <div className="mt-7 border-t border-line/70 pt-6">
