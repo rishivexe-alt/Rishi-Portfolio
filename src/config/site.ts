@@ -92,7 +92,7 @@ export const education: EducationItem[] = [
     qualification: 'B.E. Electronics & Communication Engineering',
     detail: 'VTU B.E. Honours programme',
     score: '9.48',
-    scoreLabel: 'CGPA (as listed in CV)',
+    scoreLabel: 'CGPA',
     period: 'Final year',
     location: 'Bengaluru, India',
     highlights: [
