@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    background-color: #000000;
+  }
+
+  body {
+    @apply bg-black font-sans antialiased;
+    background-color: #000000;
+    background-image: none;
+    color: #e5e5e5;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-accent-300/25 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-300 ring-offset-2 ring-offset-black;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-[#2a2419];
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#3a3122];
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-7 lg:px-8;
+  }
+
+  .section {
+    @apply relative py-16 sm:py-20 lg:py-24;
+  }
+
+  .card {
+    @apply relative rounded-2xl border border-line bg-white/[0.02] transition duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-accent-400/45 hover:bg-white/[0.04];
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-md border border-line bg-white/[0.03] px-2 py-[0.2rem] font-mono text-[0.68rem] leading-5 tracking-tight text-accent-200/80 transition-colors;
+  }
+
+  .tag-hover {
+    @apply hover:border-accent-400/50 hover:text-accent-200;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.7rem] font-medium uppercase tracking-widest2 text-accent-400;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-300 text-black hover:bg-accent-200 active:bg-accent-400;
+  }
+
+  .btn-ghost {
+    @apply btn border border-line bg-transparent text-neutral-200 hover:border-accent-400/60 hover:bg-white/[0.04] hover:text-accent-200;
+  }
+}
+
+@layer utilities {
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Reduced motion: keep content visible, drop movement. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
