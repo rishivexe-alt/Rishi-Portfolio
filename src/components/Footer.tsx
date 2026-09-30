@@ -83,7 +83,7 @@ export default function Footer() {
 
         <div className="mt-9 flex flex-col-reverse items-start gap-4 border-t border-line/70 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono text-[0.68rem] text-neutral-500">
-            &copy; {year} {identity.name} &mdash; All project content belongs to its respective authors.
+            &copy; {year} &mdash; Engineering projects, experiments and documentation.
           </p>
 
           <div className="flex items-center gap-4">
