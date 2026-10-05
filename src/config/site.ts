@@ -14,7 +14,6 @@ import {
   Trophy,
   Users,
   Wrench,
-  Zap,
 } from 'lucide-react'
 
 /* -------------------------------------------------------------------------- */
@@ -180,17 +179,6 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/rishivexe-alt/aerostack2-multi-drone-systems',
     repoLabel: 'aerostack2-multi-drone-systems',
     icon: Bot,
-  },
-  {
-    id: 'ipt-ev',
-    title: 'Resonant Inductive Power Transfer for EVs',
-    category: 'Power',
-    summary:
-      'Resonant inductive wireless charging model for electric vehicles in MATLAB, Simulink and Simscape Electrical, with the coil and compensation network derived for a 30 kHz operating point and the loss budget broken down per component.',
-    tags: ['MATLAB', 'Simulink', 'Simscape Electrical', 'Resonant Converter', 'Wireless Charging'],
-    repoUrl: 'https://github.com/rishivexe-alt/Resonant-Inductive-Power-Transfer-for-EVs',
-    repoLabel: 'Resonant-Inductive-Power-Transfer-for-EVs',
-    icon: Zap,
   },
   {
     id: 'pcb-inspector',
