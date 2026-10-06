@@ -1,5 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import {
+  BatteryCharging,
   Bot,
   Bug,
   CircuitBoard,
@@ -190,6 +191,25 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/rishivexe-alt/PCB-AI-Defect-Inspector',
     repoLabel: 'PCB-AI-Defect-Inspector',
     icon: Radar,
+  },
+  {
+    id: 'robust-inductive-wireless-ev-charging',
+    title: 'Robust Inductive Wireless EV Charging',
+    category: 'Power',
+    summary:
+      'Closed-loop resonant inductive wireless charging system for electric vehicles, developed in MATLAB, Simulink and Simscape Electrical. The project combines resonant power-transfer design with magnetic coupling analysis, air-gap and lateral-displacement studies, frequency sensitivity, compensation-topology comparison, loss budgeting, and closed-loop power regulation.',
+    tags: [
+      'MATLAB',
+      'Simulink',
+      'Simscape Electrical',
+      'Resonant Power Transfer',
+      'Closed-Loop Control',
+      'Wireless EV Charging',
+    ],
+    repoUrl:
+      'https://github.com/rishivexe-alt/Robust-Inductive-Wireless-Electric-Vehicle-Charging',
+    repoLabel: 'Robust-Inductive-Wireless-Electric-Vehicle-Charging',
+    icon: BatteryCharging,
   },
 ]
 
