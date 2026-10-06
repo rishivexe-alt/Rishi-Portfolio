@@ -14,7 +14,7 @@ The design is deliberately minimal: a pure black (`#000000`) background, no
 background patterns or imagery, and text-only project cards. Everything you see
 is type, spacing and thin borders.
 
-Live site (once deployed): `https://rishivexe-alt.github.io/Rishi-Portfolio/`
+Live site: `https://rishivexe-alt.github.io/Rishi-Portfolio/`
 
 ---
 
@@ -69,8 +69,8 @@ Exactly five projects are listed, each with a public repository:
 | Secure IoT Communication System | [`AES-Enabled-Industrial-IoT-Monitoring-and-Safety-System`](https://github.com/rishivexe-alt/AES-Enabled-Industrial-IoT-Monitoring-and-Safety-System) |
 | AeroCrypt | [`AeroCrypt`](https://github.com/rishivexe-alt/AeroCrypt) |
 | AeroStack2 Multi-Drone Systems | [`aerostack2-multi-drone-systems`](https://github.com/rishivexe-alt/aerostack2-multi-drone-systems) |
-| Resonant Inductive Power Transfer for EVs | [`Resonant-Inductive-Power-Transfer-for-EVs`](https://github.com/rishivexe-alt/Resonant-Inductive-Power-Transfer-for-EVs) |
 | PCB AI Defect Inspector | [`PCB-AI-Defect-Inspector`](https://github.com/rishivexe-alt/PCB-AI-Defect-Inspector) |
+| Robust Inductive Wireless EV Charging | [`Robust-Inductive-Wireless-Electric-Vehicle-Charging`](https://github.com/rishivexe-alt/Robust-Inductive-Wireless-Electric-Vehicle-Charging) |
 
 No card has an image, a gallery, a placeholder thumbnail or an invented URL —
 `repoUrl` is required and must be a real repository.
@@ -95,8 +95,6 @@ This is deliberate, and the code enforces it:
   the ROS 2 multi-drone simulation work. They do not overlap, so they have
   separate cards.
 - **The Secure IoT project uses an ESP8266**, not an ESP32.
-- **Certifications are left empty** rather than invented; the section explains
-  that they are omitted until verifiable.
 - The Secure IoT project's Edge-AI detection module is described as documented
   at a high level with the implementation not published, matching the public
   repository.
@@ -124,9 +122,8 @@ gzipped JS plus 6 kB gzipped CSS.
 ├── public/
 │   └── favicon.svg
 ├── src/
-│   ├── config/site.ts             ALL content: identity, links, education,
-│   │                              projects, skills, exploring, leadership,
-│   │                              certifications
+│   ├── config/site.ts             identity, links, education,
+│   │                              projects, skills, exploring, leadership
 │   ├── components/
 │   │   ├── Navbar.tsx  Hero.tsx  About.tsx  Education.tsx
 │   │   ├── Projects.tsx  Skills.tsx  Exploring.tsx
@@ -140,8 +137,9 @@ gzipped JS plus 6 kB gzipped CSS.
 └── tsconfig*.json
 ```
 
-Everything editable lives in **`src/config/site.ts`**. Components read from it;
-no content is hard-coded inside JSX.
+Project, education, skills, leadership and site identity data are centralized
+in **`src/config/site.ts`**, while section-specific presentation copy remains
+within its component.
 
 ---
 
@@ -241,7 +239,8 @@ workflow).
   `prefers-reduced-motion: reduce` is set — content is shown without animation.
 - Reveal-on-scroll uses `IntersectionObserver` plus a shared rAF-throttled
   scroll fallback, so fast scrolling can never leave content stuck invisible.
-- No images, fonts beyond the two Google families, or decorative layers, so the
+- No images, fonts beyond the four Google families (Playfair Display, Space
+  Grotesk, Inter, JetBrains Mono), or decorative layers, so the
   page stays light and free of layout shift.
 
 ---

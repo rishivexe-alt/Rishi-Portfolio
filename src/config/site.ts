@@ -1,6 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
 import {
-  BatteryCharging,
   Bot,
   Bug,
   CircuitBoard,
@@ -209,7 +208,7 @@ export const projects: Project[] = [
     repoUrl:
       'https://github.com/rishivexe-alt/Robust-Inductive-Wireless-Electric-Vehicle-Charging',
     repoLabel: 'Robust-Inductive-Wireless-Electric-Vehicle-Charging',
-    icon: BatteryCharging,
+    icon: (() => '⚡') as unknown as LucideIcon,
   },
 ]
 
